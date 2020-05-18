@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+PassGen
+{% endblock %}
+
+
+
+
+{%block content %}
+<div class="container">
+  <div class="card text-center r-borders centering">
+    <div id="adjust" style="text-align:center">
+      <span class="title" >Password Generator</span>
+    </div>
+    <div class="card-body first">
+        <div class="card-body second">
+            <p id="copypw" style="user-select: all">{{pw}}</p>
+        </div>
+        
+        <form method="post" >
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="inputGroupSelect01">Character Length: </label>
+                </div>
+                <select name="select_len" class="custom-select" id="inputGroupSelect01">
+                  <option selected>Choose</option>
+                  {% for i in range(8,21) %}
+                      {<option value="{{i}}">{{i}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+        <button type="submit" class="btn gen-btn">Generate</button>
+        <br>
+        </form>
+        <button class="btn btn-secondary copy-btn" onclick="copyElementText('copypw')">
+          Copy password
+          </button>
+      </div>
+  </div>
+</div>
+</div>
+
+ 
+  
+{% endblock %}
