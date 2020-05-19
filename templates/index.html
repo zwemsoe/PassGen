@@ -25,16 +25,16 @@ PassGen
                   <label class="input-group-text" for="inputGroupSelect01">Character Length: </label>
                 </div>
                 <select name="select_len" class="custom-select" id="inputGroupSelect01">
-                  <option selected>Choose</option>
+                  <option id="choose" selected>Choose</option>
                   {% for i in range(8,21) %}
-                      {<option value="{{i}}">{{i}}</option>
+                      {<option id="len_{{i}}" value="{{i}}">{{i}}</option>
                   {% endfor %}
                 </select>
               </div>
-        <button type="submit" class="btn gen-btn">Generate</button>
+        <button type="submit" id= "generate" class="btn gen-btn">Generate</button>
         <br>
         </form>
-        <button class="btn btn-secondary copy-btn" onclick="copyElementText('copypw')">
+        <button id="copy" class="btn btn-secondary copy-btn" onclick="copyElementText('copypw')">
           Copy password
           </button>
       </div>
