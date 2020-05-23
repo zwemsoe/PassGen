@@ -102,6 +102,9 @@ body{
       font-size:11px;
     }
     .copy-btn{
-      font-size:12px
+      font-size:12px;
+    }
+    .cb{
+      font-size:14px;
     }
   }
